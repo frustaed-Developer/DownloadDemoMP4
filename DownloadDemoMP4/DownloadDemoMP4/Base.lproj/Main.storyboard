@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zKE-du-jb2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="DF3-5p-9wg">
+            <objects>
+                <navigationController id="zKE-du-jb2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1OW-uv-9hX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Tmh-I2-U0A" kind="relationship" relationship="rootViewController" id="0ih-p5-2uu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HBI-wc-4j3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-571" y="133"/>
+        </scene>
+        <!--Download View Controller-->
+        <scene sceneID="95x-MX-N1m">
+            <objects>
+                <viewController storyboardIdentifier="DownloadViewController" id="Tmh-I2-U0A" customClass="DownloadViewController" customModule="DownloadDemoMP4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bh8-yv-yYa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gx6-wb-xzD">
+                                <rect key="frame" x="154" y="245" width="106" height="30"/>
+                                <state key="normal" title="Start Download">
+                                    <color key="titleShadowColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="StartDownload:" destination="Tmh-I2-U0A" eventType="touchUpInside" id="sHD-z8-8sK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geE-B4-XiB">
+                                <rect key="frame" x="79" y="363" width="42" height="30"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleShadowColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="PauseDownload:" destination="Tmh-I2-U0A" eventType="touchUpInside" id="mel-0b-tGW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSm-eT-vHM">
+                                <rect key="frame" x="277" y="363" width="55" height="30"/>
+                                <state key="normal" title="Resume">
+                                    <color key="titleShadowColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ResumeDownload:" destination="Tmh-I2-U0A" eventType="touchUpInside" id="Y0d-XS-r5I"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0Sr-Jf-PUf">
+                                <rect key="frame" x="79" y="306" width="253" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8s-Ni-4hk">
+                                <rect key="frame" x="171" y="548" width="72" height="30"/>
+                                <state key="normal" title="Play Video">
+                                    <color key="titleShadowColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="PlayDownloadedVideo:" destination="Tmh-I2-U0A" eventType="touchUpInside" id="lZT-F8-lCO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Yox-rn-o8v" firstAttribute="trailing" secondItem="cSm-eT-vHM" secondAttribute="trailing" constant="82" id="7NZ-Un-v6t"/>
+                            <constraint firstItem="0Sr-Jf-PUf" firstAttribute="top" secondItem="gx6-wb-xzD" secondAttribute="bottom" constant="31" id="9ei-82-JD1"/>
+                            <constraint firstItem="gx6-wb-xzD" firstAttribute="top" secondItem="Yox-rn-o8v" secondAttribute="top" constant="157" id="BiX-RS-EVU"/>
+                            <constraint firstItem="cSm-eT-vHM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="geE-B4-XiB" secondAttribute="trailing" constant="8" symbolic="YES" id="CpS-2U-rrl"/>
+                            <constraint firstItem="geE-B4-XiB" firstAttribute="leading" secondItem="Yox-rn-o8v" secondAttribute="leading" constant="79" id="EBX-Ve-MLH"/>
+                            <constraint firstItem="gx6-wb-xzD" firstAttribute="centerX" secondItem="bh8-yv-yYa" secondAttribute="centerX" id="HNu-SV-fqW"/>
+                            <constraint firstItem="geE-B4-XiB" firstAttribute="baseline" secondItem="cSm-eT-vHM" secondAttribute="baseline" id="d4p-XS-EzY"/>
+                            <constraint firstItem="geE-B4-XiB" firstAttribute="top" secondItem="0Sr-Jf-PUf" secondAttribute="bottom" constant="55" id="jPH-RL-vK0"/>
+                            <constraint firstItem="0Sr-Jf-PUf" firstAttribute="leading" secondItem="geE-B4-XiB" secondAttribute="leading" id="kaF-NR-UsL"/>
+                            <constraint firstItem="0Sr-Jf-PUf" firstAttribute="trailing" secondItem="cSm-eT-vHM" secondAttribute="trailing" id="kbI-7q-eNq"/>
+                            <constraint firstItem="Yox-rn-o8v" firstAttribute="bottom" secondItem="T8s-Ni-4hk" secondAttribute="bottom" constant="284" id="uaZ-he-tq6"/>
+                            <constraint firstItem="gx6-wb-xzD" firstAttribute="centerX" secondItem="T8s-Ni-4hk" secondAttribute="centerX" id="v7E-hw-WIg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yox-rn-o8v"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mKP-LG-Gfv"/>
+                    <connections>
+                        <outlet property="dProgress" destination="0Sr-Jf-PUf" id="gC6-Ce-7kn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CkB-HN-E4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231.8840579710145" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+</document>
